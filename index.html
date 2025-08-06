@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cobra gang</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://cobra-gang.netlify.app/media/logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <div class="container">
+    <div class="pop-up-wrapper page-width" id="pop-up">
+      <div class="pop-up">
+        <div class="pop-up-grid" id="pop-up-color">
+          <div class="welcome-text">
+            <p>Welcome <span id="text-changing"></span></p>
+          </div>
+          <div class="pop-up-text-main">
+            <div class="pop-up-image">
+              <img src="https://cobra-gang.netlify.app/media/person-with-gun.png" alt="" width="100%" height="100%">
+            </div>
+            <div class="pop-up-para">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+                took a galley of type and scrambled it to make a type specimen book. It has survived not only
+                five centuries, but also the leap into electronic typesetting, remaining essentially
+                unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+                including versions of Lorem Ipsum.
+              </p>
+              <div class="pop-up-button">
+                <button onclick="pop_up_clear()">Enter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header">
+      <header>
+        <div class="header-wrapper element">
+          <div class="page-width">
+            <div class="header-inner">
+              <div class="header-grid">
+                <div class="header-logo">
+                  <div class="header-logo--logo">
+                    <a href="#"><img src="https://cobra-gang.netlify.app/media/logo.png" alt="cobra logo" width="100%"
+                        height="100%"></a>
+                  </div>
+                  <h1 class="element">Cobra</h1>
+                </div>
+                <div class="header-search-bar">
+                  <form id="header-input-form">
+                    <input type="text" id="search-bar-input" class="element">
+                    <button class="element">Search</button>
+                  </form>
+                </div>
+                <div class="header-links">
+                  <nav>
+                    <ul>
+                      <li><a href="#" class="element">Home</a></li>
+                      <li><a href="#" class="element">Contacts</a></li>
+                      <li><a href="#" class="element">About</a></li>
+                      <li><a href="#" class="element">More</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="theme-changer" onclick="darkBrightmodeChanger()">
+                  <div class="theme-box" id="dark-bright-mode-box">
+                    <div class="theme-ball" id="dark-bright-mode"></div>
+                  </div>
+                  <div>
+                    <p id="sun-moon">☀️</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <section>
+        <div class="banner-wrapper element">
+          <div class="page-width">
+            <div class="banner-inner">
+              <div class="banner-grid">
+                <h2 class="element">Cobra Web</h2>
+                <p class="element">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+                  adipisci velit..."
+                  "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is
+                  pain..."</p>
+                <a href="#" class="button element">Let's gooo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
