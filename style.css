@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  transition: 0.3s;
+}
+
+.page-width {
+  max-width: 1600px;
+  margin: auto;
+}
+
+.header-logo--logo {
+  width: 80px;
+  height: 80px;
+}
+
+.header-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 60px;
+
+}
+
+.header-search-bar input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 100px;
+  width: 400px;
+  outline: none;
+}
+
+.header-search-bar button {
+  padding: 10px;
+  border-radius: 100px;
+  font-size: 16px;
+  border: 2px solid black;
+}
+
+.header-search-bar button:active {
+  background-color: gray;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-links ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.header-links ul a {
+  color: black;
+}
+
+.header-links ul a:hover {
+  color: gray;
+}
+
+.header-wrapper {
+  border-bottom: 2px solid black;
+}
+
+.banner-inner {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-changer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.theme-changer p {
+  padding: 10px
+}
+
+.banner-grid {
+  width: 500px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.banner-grid a {
+  color: black;
+}
+
+.banner-grid h2 {
+  padding-bottom: 10px;
+}
+
+.banner-wrapper {
+  border-bottom: 2px solid black;
+}
+
+.theme-box {
+  width: 50px;
+  border: 2px solid black;
+  border-radius: 100px;
+  padding: 2px;
+}
+
+.theme-ball {
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+  border-radius: 100px;
+  transition: 0.3s;
+  background-color: black;
+}
+
+.button {
+  display: inline-block;
+  border: 2px solid red;
+  padding: 13px 36px;
+  margin: 10px;
+  border-radius: 100px;
+}
+
+.color-white {
+  color: white !important;
+  background-color: black;
+  border-color: white !important;
+}
+
+.pop-up-grid {
+  width: 700px;
+  height: 400px;
+  position: relative;
+  background: linear-gradient(white, gray, black);
+  backdrop-filter: blur(100px);
+  border-radius: 40px;
+  animation: myanimation 1s;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: -25px 25px 25px #0005;
+  transition: 0.3s;
+}
+.pop-up {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ transform: translate(-50%, -50%);
+}
+
+.welcome-text {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.pop-up-image {
+  height: 300px;
+  width: 180px;
+}
+.pop-up-wrapper {
+  display: none;
+}
+.pop-up-text-main {
+
+  display: flex;
+}
+
+.pop-up-para {
+  width: 400px;
+  text-align: left;
+  padding-left: 30px
+}
+
+@keyframes myanimation {
+  0% {
+    width: 10px;
+    transform: skew(30deg);
+  }
+
+  100% {
+    width: 700px;
+    transform: skew(0deg);
+  }
+}
+
+.pop-up-button {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.pop-up-button button {
+  padding: 13px 36px;
+  border-radius: 100px;
+  border: 2px inset red;
+  background-color: black;
+  color: white;
+}
