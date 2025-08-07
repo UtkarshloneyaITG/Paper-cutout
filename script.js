@@ -8,6 +8,7 @@ let popUpColor = document.getElementById('pop-up-color') // pop up color
 let textChanging = document.getElementById('text-changing') // pop up text 
 let headerForm = document.getElementById('header-input-form') // header form
 let searchBarInput = document.getElementById('search-bar-input'); //search bar input
+let tableMainPrinting = document.getElementById('table-prinnting')
 let stopText = null;
 function darkBrightmodeChanger() {
 
@@ -43,9 +44,9 @@ setTimeout(() => {
   let x = 0;
   console.log(arr)
   pop_up.style.display = 'block'
- stopText = setInterval(() => {
+  stopText = setInterval(() => {
 
-      if(arr[x] == ' ')textChanging.innerText = ' '
+    if (arr[x] == ' ') textChanging.innerText = ' '
     else textChanging.innerText += arr[x]
     textChanging.style.color = 'red'
     if (x == arr.length) {
@@ -69,13 +70,148 @@ setTimeout(() => {
 //   let color = `linear-gradient(${colorchanger()},${colorchanger()},${colorchanger()})`;
 //   popUpColor.style.background = color;
 // },100)
-
-
-headerForm.addEventListener('submit',(e)=>{
+let banner = document.getElementById('banner');
+let changingPage = document.getElementById('changingPage')
+let tablesection = document.getElementById('table-table')
+headerForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  let inputValue = searchBarInput.value;
-  inputValue.toLowerCase()
-  console.log(inputValue == 'table')
-    
-  
+  let inputValue = searchBarInput.value.toLowerCase();
+  let findPage = document.getElementsByClassName('page');
+  let arrOfInputvalue = inputValue.split(' ')
+  inputValue = ''
+  for (let i = 0; i < arrOfInputvalue.length; i++) {
+    if (arrOfInputvalue[i] == ' ') {
+      continue;
+    }
+    inputValue += arrOfInputvalue[i]
+  }
+
+  for (let x = 0; x < findPage.length; x++) {
+    if (findPage[x].classList.contains(inputValue)) {
+      searchBarInput.style.color = 'green'
+      setTimeout(() => {
+        searchBarInput.style.color = 'black'
+      }, 1000)
+
+      findPage[x].classList.add('enable');
+      for (let y = 0; y < findPage.length; y++) {
+        if (findPage[y].classList.contains(inputValue)) {
+          findPage[y].classList.remove('disable')
+        }
+        else {
+          findPage[y].classList.add('disable')
+          findPage[y].classList.remove('enable')
+        }
+
+      }
+    }
+
+  }
+  // if (inputValue == 'table') {
+  //   tablesection.setAttribute('class','enable')
+  //   banner.setAttribute('class','disable')
+  // }
+  // else if(inputValue == 'home'){
+  //   banner.setAttribute('class','enable')
+  //   tablesection.setAttribute('class','disable')
+  // }
 })
+
+
+let buttonTablePrinter = document.getElementById('button-table-printer')
+let tableInput = document.getElementById('table-input')
+function tablePrinter() {
+  let tablevalue = tableInput.value;
+  tableInput.value = ''
+  buttonTablePrinter.style.display = 'none'
+  tableMainPrinting.innerHTML = ''
+  let x = 0
+  if (tablevalue == '') {
+    tablevalue = 1
+  }
+  let hello = setInterval(() => {
+    x++
+    if (x >= 10) {
+      clearIntervalTable()
+    }
+    tableMainPrinting.innerHTML += `<p class ='element'>${tablevalue} x ${x} = ${x * tablevalue}<p>`
+  }, 500)
+  function clearIntervalTable() {
+    clearInterval(hello)
+    buttonTablePrinter.style.display = 'block';
+  }
+}
+
+let textmanipulation = document.getElementById('text-maipulation-input')
+let input_p_tag = document.getElementById('text-maipulation-input-text')
+let output_p_tag = document.getElementById('text-maipulation-output-text')
+let colorchange = document.getElementById('color-change')
+let history = null;
+function textManipulation() {
+  setInterval(() => {
+    input_p_tag.innerText = textmanipulation.value;
+    output_p_tag.innerText = textmanipulation.value;
+  })
+
+}
+function bold() {
+  if (output_p_tag.style.fontWeight == '400') {
+    output_p_tag.style.fontWeight = '700'
+  }
+  else {
+    output_p_tag.style.fontWeight = '400';
+  }
+}
+
+let freeVariable = 0
+let freeVariable2 = 0
+let freeVariable3 = 0
+let freeVariable4 = 0
+function Uppercasetext() {
+  if (freeVariable == 0) {
+    output_p_tag.style.textTransform = 'uppercase'
+    freeVariable++
+  }
+  else {
+    output_p_tag.style.textTransform = 'none'
+    freeVariable = 0
+  }
+}
+function Lowercasetext() {
+  if (freeVariable2 == 0) {
+    output_p_tag.style.textTransform = 'lowercase'
+    freeVariable2++
+  }
+  else {
+    output_p_tag.style.textTransform = 'none'
+    freeVariable2 = 0
+  }
+}
+function textStyleItalic() {
+  if (freeVariable3 == 0) {
+    output_p_tag.style.fontStyle = 'italic'
+    freeVariable3++
+  }
+  else {
+    output_p_tag.style.fontStyle = 'normal'
+    freeVariable3 = 0
+  }
+}
+function textStylecolor() {
+
+  output_p_tag.style.color = colorchange.value
+}
+function capatalizeEachWord() {
+  if (freeVariable4 == 0) {
+    output_p_tag.style.textTransform = 'capitalize'
+    freeVariable4++
+  }
+  else {
+    output_p_tag.style.textTransform = 'none'
+    freeVariable4 = 0
+  }
+}
+function clearText() {
+  textmanipulation.value = '';
+
+}

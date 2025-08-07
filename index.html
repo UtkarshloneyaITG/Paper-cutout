@@ -28,8 +28,7 @@
                 took a galley of type and scrambled it to make a type specimen book. It has survived not only
                 five centuries, but also the leap into electronic typesetting, remaining essentially
                 unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-                Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-                including versions of Lorem Ipsum.
+
               </p>
               <div class="pop-up-button">
                 <button onclick="pop_up_clear()">Enter</button>
@@ -80,23 +79,68 @@
             </div>
           </div>
         </div>
+
       </header>
-      <section>
-        <div class="banner-wrapper element">
-          <div class="page-width">
-            <div class="banner-inner">
-              <div class="banner-grid">
-                <h2 class="element">Cobra Web</h2>
-                <p class="element">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
-                  adipisci velit..."
-                  "There is no one who loves pain itself, sdfwho seeks after it and wants to have it, simply because it is
-                  pain..."</p>
-                <a href="#" class="button element">Let's gooo</a>
-              </div>
+    </div>
+    <div class="page-container">
+    <section id="banner" class="page home">
+      <div class="banner-wrapper element">
+        <div class="page-width" id="changingPage">
+          <div class="banner-inner height">
+            <div class="banner-grid">
+              <h2 class="element">Cobra Web</h2>
+              <p class="element">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+                adipisci velit..."
+                "There is no one who loves pain itself, sdfwho seeks after it and wants to have it, simply because it is
+                pain..."</p>
+              <a href="#" class="button element">Let's gooo</a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <section class='disable table page' id="table-table">
+      <div class="page-width element">
+      <div class="table-inner height">
+        <div class="table-grid">
+          <div class="input-table">
+            <input type="number" id="table-input">
+            <button onclick="tablePrinter()" id="button-table-printer">Show</button>
+          </div>
+          <div class="tabel-main-grid element" id="table-prinnting">
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="disable textmanipulation page">
+      <div class="page-width element">
+        <div class="text-maipulation-inner height">
+          <div class="text-maipulation-grid">
+            <div class="text-maipulation-input">
+              <input type="text" id="text-maipulation-input" onclick="textManipulation()" class="text-maipulation-input">
+              <button onclick="clearText()">Clear</button>
+            </div>
+            <div class="text-maipulation-result element">
+              <P class="your_text" id="text-maipulation-input-text"></P>
+              <p id="text-maipulation-output-text" class="output_text"></p>
+            </div>
+            <div class="text-maipulation-buttons">
+              <button onclick="bold()">Bold</button>
+              <button onclick="textStyleItalic()">Italic</button>
+              <button onclick="Uppercasetext()">Uppercase</button>
+              <button onclick="Lowercasetext()">Lowercase</button>
+              <input type="color" id="color-change">
+              <button onclick="textStylecolor()">Color change</button>
+              <button onclick="capatalizeEachWord()">Capitalize Each Word</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="disable page ">
+
+    </section>
     </div>
   </div>
   <script src="script.js"></script>
