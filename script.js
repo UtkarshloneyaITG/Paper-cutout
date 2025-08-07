@@ -148,10 +148,9 @@ let output_p_tag = document.getElementById('text-maipulation-output-text')
 let colorchange = document.getElementById('color-change')
 let history = null;
 function textManipulation() {
-  setInterval(() => {
+
     input_p_tag.innerText = textmanipulation.value;
     output_p_tag.innerText = textmanipulation.value;
-  })
 
 }
 function bold() {
@@ -198,7 +197,6 @@ function textStyleItalic() {
   }
 }
 function textStylecolor() {
-
   output_p_tag.style.color = colorchange.value
 }
 function capatalizeEachWord() {
@@ -214,4 +212,14 @@ function capatalizeEachWord() {
 function clearText() {
   textmanipulation.value = '';
 
+}
+let todolistbox = document.getElementById('todolist')
+let todolistinputvalue = document.getElementById('to-do-list-input')
+function todolistadd(){
+  let newlist = document.createElement('li')
+  newlist.innerHTML = `${todolistinputvalue.value}<button onclick='todolistdelete(this)'>Delete</button>`
+  todolistbox.appendChild(newlist)
+}
+function todolistdelete(ele){
+  ele.parentElement.remove()
 }

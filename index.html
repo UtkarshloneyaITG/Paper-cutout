@@ -11,7 +11,7 @@
 
 <body>
   <div class="container">
-    <div class="pop-up-wrapper page-width" id="pop-up">
+    <!-- <div class="pop-up-wrapper page-width" id="pop-up">
       <div class="pop-up">
         <div class="pop-up-grid" id="pop-up-color">
           <div class="welcome-text">
@@ -37,7 +37,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="header">
       <header>
         <div class="header-wrapper element">
@@ -82,65 +82,105 @@
 
       </header>
     </div>
-    <div class="page-container">
-    <section id="banner" class="page home">
-      <div class="banner-wrapper element">
-        <div class="page-width" id="changingPage">
-          <div class="banner-inner height">
-            <div class="banner-grid">
-              <h2 class="element">Cobra Web</h2>
-              <p class="element">"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
-                adipisci velit..."
-                "There is no one who loves pain itself, sdfwho seeks after it and wants to have it, simply because it is
-                pain..."</p>
-              <a href="#" class="button element">Let's gooo</a>
+    <div class="page-container element">
+      <section id="banner" class="page home disable">
+        <div class="banner-wrapper element">
+          <div class="page-width" id="changingPage">
+            <div class="banner-inner height">
+              <div class="banner-grid">
+                <h2>Cobra Web</h2>
+                <p>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur,
+                  adipisci velit..."
+                  "There is no one who loves pain itself, sdfwho seeks after it and wants to have it, simply because it
+                  is
+                  pain..."</p>
+                <a href="#" class="button element">Let's gooo</a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class='disable table page' id="table-table">
-      <div class="page-width element">
-      <div class="table-inner height">
-        <div class="table-grid">
-          <div class="input-table">
-            <input type="number" id="table-input">
-            <button onclick="tablePrinter()" id="button-table-printer">Show</button>
-          </div>
-          <div class="tabel-main-grid element" id="table-prinnting">
-          </div>
-        </div>
-      </div>
-      </div>
-    </section>
-    <section class="disable textmanipulation page">
-      <div class="page-width element">
-        <div class="text-maipulation-inner height">
-          <div class="text-maipulation-grid">
-            <div class="text-maipulation-input">
-              <input type="text" id="text-maipulation-input" onclick="textManipulation()" class="text-maipulation-input">
-              <button onclick="clearText()">Clear</button>
-            </div>
-            <div class="text-maipulation-result element">
-              <P class="your_text" id="text-maipulation-input-text"></P>
-              <p id="text-maipulation-output-text" class="output_text"></p>
-            </div>
-            <div class="text-maipulation-buttons">
-              <button onclick="bold()">Bold</button>
-              <button onclick="textStyleItalic()">Italic</button>
-              <button onclick="Uppercasetext()">Uppercase</button>
-              <button onclick="Lowercasetext()">Lowercase</button>
-              <input type="color" id="color-change">
-              <button onclick="textStylecolor()">Color change</button>
-              <button onclick="capatalizeEachWord()">Capitalize Each Word</button>
+      </section>
+      <section class='disable table page ' id="table-table">
+        <div class="page-width element">
+          <div class="table-inner height">
+            <div class="table-grid">
+              <div class="input-table">
+                <input type="number" id="table-input">
+                <button onclick="tablePrinter()" id="button-table-printer">Show</button>
+              </div>
+              <div class="tabel-main-grid element" id="table-prinnting">
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="disable page ">
-
-    </section>
+      </section>
+      <section class="disable textmanipulation page">
+        <div class="page-width element">
+          <div class="text-maipulation-inner height">
+            <div class="text-maipulation-grid">
+              <div class="text-maipulation-input">
+                <input type="text" id="text-maipulation-input" onkeyup="textManipulation()"
+                  class="text-maipulation-input">
+                <button onclick="clearText()">Clear</button>
+              </div>
+              <div class="text-maipulation-result element">
+                <P class="your_text" id="text-maipulation-input-text"></P>
+                <p id="text-maipulation-output-text" class="output_text"></p>
+              </div>
+              <div class="text-maipulation-buttons">
+                <button onclick="bold()">Bold</button>
+                <button onclick="textStyleItalic()">Italic</button>
+                <button onclick="Uppercasetext()">Uppercase</button>
+                <button onclick="Lowercasetext()">Lowercase</button>
+                <input type="color" id="color-change">
+                <button onclick="textStylecolor()">Color change</button>
+                <button onclick="capatalizeEachWord()">Capitalize Each Word</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page todolist">
+        <div class="to-do-list-wrapper element">
+          <div class="page-width">
+            <div class="to-do-list-inner height">
+              <div class="to-do-list-grid">
+                <div class="to-do-list-edit-container">
+                  <div class="to-do-list-input">
+                    <input type="text" id="to-do-list-input">
+                    <button onclick="todolistadd()">Add</button>
+                  </div>
+                  <div class="to-do-list-edit-button">
+                    <button>Edit
+                      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                      <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M21.2799 6.40005L11.7399 15.94C10.7899 16.89 7.96987 17.33 7.33987 16.7C6.70987 16.07 7.13987 13.25 8.08987 12.3L17.6399 2.75002C17.8754 2.49308 18.1605 2.28654 18.4781 2.14284C18.7956 1.99914 19.139 1.92124 19.4875 1.9139C19.8359 1.90657 20.1823 1.96991 20.5056 2.10012C20.8289 2.23033 21.1225 2.42473 21.3686 2.67153C21.6147 2.91833 21.8083 3.21243 21.9376 3.53609C22.0669 3.85976 22.1294 4.20626 22.1211 4.55471C22.1128 4.90316 22.0339 5.24635 21.8894 5.5635C21.7448 5.88065 21.5375 6.16524 21.2799 6.40005V6.40005Z"
+                          stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        <path
+                          d="M11 4H6C4.93913 4 3.92178 4.42142 3.17163 5.17157C2.42149 5.92172 2 6.93913 2 8V18C2 19.0609 2.42149 20.0783 3.17163 20.8284C3.92178 21.5786 4.93913 22 6 22H17C19.21 22 20 20.2 20 18V13"
+                          stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="to-do-list-edit-main-page element">
+                  <div class="to-do-list-edit-main-page-heading element">
+                    <span>To Do List</span>
+                  </div>
+                  <div class="to-do-list-edit-main-page-body">
+                    <div class="to-do-list-edit-main-page-body-inner">
+                      <ul class="to-do-list element" id="todolist">
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
   <script src="script.js"></script>

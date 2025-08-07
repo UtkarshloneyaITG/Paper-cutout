@@ -133,7 +133,19 @@
   background-color: black;
   border-color: white !important;
 }
-
+.color-white button{
+  background-color: black;
+  border-color: white;
+  color:white;
+}
+.color-white input {
+  color:white;
+  background-color: black;
+  border-color: white !important;
+} 
+.color-white li {
+  border-color:white !important;
+}
 .pop-up-grid {
   width: 700px;
   height: 400px;
@@ -297,9 +309,85 @@
 }
 @keyframes page-animation {
   0%{
-    transform: translateY(500px);
+    transform: translateY(300px);
+    opacity: 0;
   }
   100% {
     transform: translateY(0px);
+    opacity: 1;
   }
+}
+.to-do-list-edit-button button{
+  color:black !important;
+  background-color: greenyellow !important;
+  padding: 13px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  font-size: 20px;
+}
+.to-do-list-input input{
+  padding:10px;
+  width:300px;
+  border-radius: 100px;
+  outline: none;
+}
+.to-do-list-input button {
+  padding:10px;
+  border-radius: 100px;
+}
+.to-do-list-edit-container {
+  display: flex;
+  flex-direction: column;
+  padding:50px;
+  gap:100px;
+}
+.to-do-list-grid {
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.to-do-list-edit-main-page {
+  width:600px;
+  overflow: auto;
+  height: 450px;
+  margin-top: 30px;
+  border-radius: 10px;
+  border: 5px inset black;
+}
+.to-do-list-edit-main-page-heading {
+  padding:10px;
+  color:red;
+  text-align: center;
+  border-bottom:2px solid black;
+}
+.to-do-list li {
+  margin:5px;
+  font-size: 18px;
+  padding-left:10px ;
+  border: 2px solid black;
+  border-radius: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: to-do-list-animation 0.3s;
+}
+@keyframes to-do-list-animation  {
+  0%{
+    transform: translateY(-20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.to-do-list button {
+  font-size: 18px;
+  border-radius: 0px 100px 100px 0px;
+  padding:5px;
+  border:none ;
+  border-left:2px solid black;
+  background-color: red;
+  color: white;
 }
