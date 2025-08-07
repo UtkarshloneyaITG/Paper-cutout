@@ -16,8 +16,8 @@ html {
 }
 
 .header-logo--logo {
-width: 100px;
-padding:30px;
+  width: 100px;
+  padding: 30px;
 }
 
 .header-grid {
@@ -178,7 +178,7 @@ padding:30px;
 }
 
 .pop-up-image {
-  width:30%;
+  width: 30%;
 }
 
 .pop-up-wrapper {
@@ -483,6 +483,7 @@ padding:30px;
 #loaded {
   display: none;
 }
+
 :root {
   --color: #00ffff;
   --size: 8px;
@@ -516,14 +517,37 @@ padding:30px;
   animation: blink var(--time) infinite;
 }
 
-.bar-1 { animation-delay: 0s; }
-.bar-2 { animation-delay: 0.15s; }
-.bar-3 { animation-delay: 0.3s; }
-.bar-4 { animation-delay: 0.45s; }
-.bar-5 { animation-delay: 0.6s; }
-.bar-6 { animation-delay: 0.75s; }
-.bar-7 { animation-delay: 0.9s; }
-.bar-8 { animation-delay: 1.05s; }
+.bar-1 {
+  animation-delay: 0s;
+}
+
+.bar-2 {
+  animation-delay: 0.15s;
+}
+
+.bar-3 {
+  animation-delay: 0.3s;
+}
+
+.bar-4 {
+  animation-delay: 0.45s;
+}
+
+.bar-5 {
+  animation-delay: 0.6s;
+}
+
+.bar-6 {
+  animation-delay: 0.75s;
+}
+
+.bar-7 {
+  animation-delay: 0.9s;
+}
+
+.bar-8 {
+  animation-delay: 1.05s;
+}
 
 .loader-text {
   margin-top: 20px;
@@ -535,7 +559,18 @@ padding:30px;
 }
 
 @keyframes blink {
-  0% { opacity: 0.1; transform: scaleY(0.5); }
-  50% { opacity: 1; transform: scaleY(1.2); }
-  100% { opacity: 0.1; transform: scaleY(0.5); }
+  0% {
+    opacity: 0.1;
+    transform: scaleY(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1.2);
+  }
+
+  100% {
+    opacity: 0.1;
+    transform: scaleY(0.5);
+  }
 }
