@@ -2,12 +2,14 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif   ;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: 0.3s;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .page-width {
   max-width: 1600px;
   margin: auto;
@@ -34,7 +36,9 @@ html {
   outline: none;
 }
 
-.header-search-bar button,.input-table button,.text-maipulation-input button{
+.header-search-bar button,
+.input-table button,
+.text-maipulation-input button {
   padding: 10px;
   border-radius: 100px;
   font-size: 16px;
@@ -70,39 +74,35 @@ html {
 }
 
 .banner-inner {
- 
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .height {
-   height: 500px;
+  height: calc(100vh - 98px);
 }
+
 .theme-changer {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 20px;
-   cursor: pointer;
-   user-select: none;
-}
-
-.theme-changer p {
-  padding: 10px
+  cursor: pointer;
+  user-select: none;
 }
 
 .banner-grid {
-  width: 500px;
+  width: 600px;
   text-align: center;
   font-size: 20px;
-}
-
-.banner-grid a {
-  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
 }
 
 .banner-grid h2 {
-  padding-bottom: 10px;
+  font-size: 50px;
 }
 
 .theme-box {
@@ -110,7 +110,7 @@ html {
   border: 2px solid black;
   border-radius: 100px;
   padding: 2px;
- 
+
 }
 
 .theme-ball {
@@ -123,7 +123,6 @@ html {
 }
 
 .button {
-  display: inline-block;
   border: 2px solid red;
   padding: 13px 36px;
   margin: 10px;
@@ -132,22 +131,25 @@ html {
 
 .color-white {
   color: white !important;
-  background-color: black;
   border-color: white !important;
 }
-.color-white button{
+
+.color-white button {
   background-color: black;
   border-color: white;
-  color:white;
+  color: white;
 }
+
 .color-white input {
-  color:white;
+  color: white;
   background-color: black;
   border-color: white !important;
-} 
-.color-white li {
-  border-color:white !important;
 }
+
+.color-white li {
+  border-color: white !important;
+}
+
 .pop-up-grid {
   width: 700px;
   height: 400px;
@@ -161,11 +163,13 @@ html {
   box-shadow: -25px 25px 25px #0005;
   transition: 0.3s;
 }
+
 .pop-up {
   position: absolute;
   top: 50%;
   left: 50%;
- transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 .welcome-text {
@@ -174,12 +178,13 @@ html {
 }
 
 .pop-up-image {
-  height: 300px;
-  width: 180px;
+  width:30%;
 }
+
 .pop-up-wrapper {
   display: none;
 }
+
 .pop-up-text-main {
 
   display: flex;
@@ -215,52 +220,60 @@ html {
   background-color: black;
   color: white;
 }
+
 .tabel-main-grid {
-  border:5px inset black;
-  padding:10px;
+  border: 5px inset black;
+  padding: 10px;
   width: fit-content;
 
 }
+
 .table-inner {
   display: flex;
   align-items: center;
   /* justify-content: center; */
   flex-direction: column;
 }
+
 .input-table {
-    padding-top:50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap:30px
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px
 }
+
 .input-table input {
-  padding:10px;
-  width:200px;
+  padding: 10px;
+  width: 200px;
   border-radius: 100px;
 }
+
 .tabel-main-grid {
   margin: 40px auto;
   font-size: 22px;
 }
+
 .disable {
   display: none;
 }
+
 .enable {
   display: block;
 }
 
 .text-maipulation-result {
-  width:400px;
-  height:200px;
-  border:2px solid black;
+  width: 400px;
+  height: 200px;
+  border: 2px solid black;
   margin: 20px;
-  padding:10px;
-  border-radius:10px;
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
   overflow-wrap: break-word;
-  overflow:auto;
+  overflow: auto;
 }
+
 .text-maipulation-grid {
   display: flex;
   flex-direction: column;
@@ -268,59 +281,73 @@ html {
   align-items: center;
   padding: 60px;
 }
-.text-maipulation-input input{
-  padding:10px;
-  width:200px;
+
+.text-maipulation-input input {
+  padding: 10px;
+  width: 200px;
   /* font-size:; */
   border-radius: 100px;
 }
-.text-maipulation-buttons button{
-  padding:13px 36px;
+
+.text-maipulation-buttons button {
+  padding: 13px 36px;
   border-radius: 20px;
 }
-.text-maipulation-buttons input{
-  width:60px;
-  height:40px;
-  border-radius:20px
+
+.text-maipulation-buttons input {
+  width: 60px;
+  height: 40px;
+  border-radius: 20px
 }
+
 .text-maipulation-buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:20px;
+  gap: 20px;
 }
+
 .your_text {
   border-bottom: 1px solid red;
-  padding:5px;
+  padding: 5px;
 
 }
+
 .text-maipulation-input {
   font-weight: normal;
   font-size: 15px;
 }
+
 .output_text {
-  padding:15px;
+  padding: 15px;
 }
+
 .page {
   animation: page-animation 0.6s;
 }
+
 .page-container {
-  height: 510px;
+  height: calc(100vh - 100px);
   overflow: hidden;
-  border-bottom:2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
 }
+
 @keyframes page-animation {
-  0%{
+  0% {
     transform: translateY(300px);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0px);
     opacity: 1;
   }
 }
-.to-do-list-edit-button button{
-  color:black !important;
+
+.to-do-list-edit-button button {
+  color: black !important;
   background-color: greenyellow !important;
   padding: 13px 36px;
   display: flex;
@@ -329,49 +356,54 @@ html {
   border-radius: 100px;
   font-size: 20px;
 }
-.to-do-list-input input{
-  padding:10px;
-  width:300px;
+
+.to-do-list-input input {
+  padding: 10px;
+  width: 300px;
   border-radius: 100px;
   outline: none;
 }
 
 .to-do-list-input button {
-  padding:10px;
+  padding: 10px;
   border-radius: 100px;
 }
+
 .to-do-list-edit-container {
   display: flex;
   flex-direction: column;
-  padding:50px;
-  gap:100px;
+  padding: 50px;
+  gap: 100px;
   align-items: center;
 }
+
 .to-do-list-grid {
-display: flex;
-justify-content: space-around;
-align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
 .to-do-list-edit-main-page {
-  width:600px;
-  height: 450px;
+  width: 600px;
+  height: calc(100%-650px);
   margin-top: 30px;
   border-radius: 10px;
   border: 5px inset black;
 }
+
 .to-do-list-edit-main-page-heading {
-  padding:10px;
-  color:red;
+  padding: 10px;
+  color: red;
   font-size: 20px;
   font-weight: 700;
   text-align: center;
-  border-bottom:2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .to-do-list li {
-  margin:5px;
+  margin: 5px;
   font-size: 18px;
-  padding-left:10px ;
+  padding-left: 10px;
   border: 2px solid black;
   border-radius: 20px;
   display: flex;
@@ -380,14 +412,16 @@ align-items: center;
   animation: to-do-list-animation 0.3s;
   overflow-wrap: break-word;
   padding: 5px;
-  width:565px;
-  margin:10px 5px
+  width: 565px;
+  margin: 10px 5px
 }
-@keyframes to-do-list-animation  {
-  0%{
+
+@keyframes to-do-list-animation {
+  0% {
     transform: translateY(-40px);
   }
-  100%{
+
+  100% {
     transform: translateY(0px);
   }
 }
@@ -395,43 +429,51 @@ align-items: center;
 .to-do-list button {
   font-size: 18px;
   border-radius: 0px 15px 15px 0px;
-  padding:10px;
-  border:none ;
-  border:2px solid black;
+  padding: 10px;
+  border: none;
+  border: 2px solid black;
   background-color: red;
   color: white;
-  right:0;
+  right: 0;
 }
+
 .to-do-list-input {
   visibility: hidden;
   transition: 0.0s;
 }
+
 .todolist-up-down-button {
   position: absolute;
-  bottom:50px;
-  right: 10px;
+  bottom: 50px;
+  right: 50%;
 }
-.todolist-up-down-button  p{
-  color:white;
+
+.todolist-up-down-button p {
+  color: white;
   background-color: white;
   border-radius: 100px;
   display: none;
 }
+
 .to-do-list-inner {
   position: relative;
 }
+
 .to-do-list-edit-main-page-body-inner {
   overflow: auto;
-  height: 400px;
+  height: calc(100vh - 220px);
 }
+
 .to-do-list-edit-main-page-body-inner::-webkit-scrollbar {
-  width:3px;
+  width: 3px;
 }
+
 .to-do-list-edit-main-page-body-inner::-webkit-scrollbar-thumb {
   background-color: lightblue;
-  border:1px inset red;
+  border: 1px inset red;
   border-radius: 100px;
 }
+
 .to-do-list-edit-main-page-body-inner::-webkit-scrollbar-track {
   background-color: white;
 }
