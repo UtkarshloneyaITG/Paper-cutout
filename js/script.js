@@ -82,6 +82,13 @@ pop_up.style.display = 'block'
 },2000)
 
 
+
+// loader js
+
+window.addEventListener('load',()=>{
+  document.getElementById('loader').style.display = 'none'
+  document.getElementById('loaded').style.display = 'block'
+})
 // function colorchanger(){
 //   let x = Math.floor(Math.random()*255)-1
 //   let y = Math.floor(Math.random()*255)-1
