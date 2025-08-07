@@ -5,7 +5,9 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif   ;
   transition: 0.3s;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .page-width {
   max-width: 1600px;
   margin: auto;
@@ -333,6 +335,7 @@
   border-radius: 100px;
   outline: none;
 }
+
 .to-do-list-input button {
   padding:10px;
   border-radius: 100px;
@@ -342,6 +345,7 @@
   flex-direction: column;
   padding:50px;
   gap:100px;
+  align-items: center;
 }
 .to-do-list-grid {
 display: flex;
@@ -350,7 +354,6 @@ align-items: center;
 }
 .to-do-list-edit-main-page {
   width:600px;
-  overflow: auto;
   height: 450px;
   margin-top: 30px;
   border-radius: 10px;
@@ -359,23 +362,30 @@ align-items: center;
 .to-do-list-edit-main-page-heading {
   padding:10px;
   color:red;
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
   border-bottom:2px solid black;
 }
+
 .to-do-list li {
   margin:5px;
   font-size: 18px;
   padding-left:10px ;
   border: 2px solid black;
-  border-radius: 100px;
+  border-radius: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   animation: to-do-list-animation 0.3s;
+  overflow-wrap: break-word;
+  padding: 5px;
+  width:565px;
+  margin:10px 5px
 }
 @keyframes to-do-list-animation  {
   0%{
-    transform: translateY(-20px);
+    transform: translateY(-40px);
   }
   100%{
     transform: translateY(0px);
@@ -384,10 +394,44 @@ align-items: center;
 
 .to-do-list button {
   font-size: 18px;
-  border-radius: 0px 100px 100px 0px;
-  padding:5px;
+  border-radius: 0px 15px 15px 0px;
+  padding:10px;
   border:none ;
-  border-left:2px solid black;
+  border:2px solid black;
   background-color: red;
   color: white;
+  right:0;
+}
+.to-do-list-input {
+  visibility: hidden;
+  transition: 0.0s;
+}
+.todolist-up-down-button {
+  position: absolute;
+  bottom:50px;
+  right: 10px;
+}
+.todolist-up-down-button  p{
+  color:white;
+  background-color: white;
+  border-radius: 100px;
+  display: none;
+}
+.to-do-list-inner {
+  position: relative;
+}
+.to-do-list-edit-main-page-body-inner {
+  overflow: auto;
+  height: 400px;
+}
+.to-do-list-edit-main-page-body-inner::-webkit-scrollbar {
+  width:3px;
+}
+.to-do-list-edit-main-page-body-inner::-webkit-scrollbar-thumb {
+  background-color: lightblue;
+  border:1px inset red;
+  border-radius: 100px;
+}
+.to-do-list-edit-main-page-body-inner::-webkit-scrollbar-track {
+  background-color: white;
 }
