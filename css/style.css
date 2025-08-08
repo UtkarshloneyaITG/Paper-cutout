@@ -670,7 +670,8 @@ html {
 
 #backtoproject button {
   padding: 13px 10px;
-  background-color: gray;
+  background-color: lightgray;
+  color: #000;
 }
 
 #backtoproject:hover {
