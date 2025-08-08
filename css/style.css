@@ -332,6 +332,7 @@ html {
   border-bottom: 2px solid black;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 @keyframes page-animation {
