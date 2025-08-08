@@ -68,12 +68,12 @@
                     <a href="#"><img src="media/vecteezy_anime-eye-png-graphic-clipart-design_19607058.png"
                         alt="CutOut logo" width="100%" height="100%" loading="lazy"></a>
                   </div>
-                  <h1 class="element">Cutout</h1>
+                  <h1 class="element" onclick="searchBarInput.value = 'home', SubmitEvent_per()">Cutout</h1>
                 </div>
                 <div class="header-search-bar">
                   <form id="header-input-form">
                     <input type="text" id="search-bar-input" class="element">
-                    <button class="element">Search</button>
+                    <button class="element" type="submit" id="submit-button">Search</button>
                   </form>
                 </div>
                 <div class="header-links">
@@ -108,6 +108,14 @@
       </header>
     </div>
     <div class="page-container element">
+      <div id="backtoproject">
+        <button onclick="searchBarInput.value = 'projects', SubmitEvent_per()" id="backtoproject">project</button>
+          <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="red">
+          <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+        </svg>
+        </div>
+      </div>
       <section id="banner" class="page home">
         <div class="banner-wrapper element">
           <div class="page-width" id="changingPage">
@@ -120,13 +128,38 @@
                   journey through the world of programming and innovation. Whether you're here to get inspired,
                   collaborate, or just take a look around — I'm glad you're here!"</p>
                 <div class="banner-button">
-                  <button class="button element">Let's gooo</button>
+                  <button class="button element" onclick="searchBarInput.value = 'projects', SubmitEvent_per()">Let's
+                    gooo</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <section class="page projects disable">
+        <div class="projects-wrapper">
+          <div class="page-width">
+            <div class="project-inner">
+              <div class="project-grid">
+                <div onclick="searchBarInput.value = 'table', SubmitEvent_per()">
+                  <span>Table</span>
+                </div>
+                <div onclick="searchBarInput.value = 'textManipulation', SubmitEvent_per()">
+                  <span>Text Manipulation</span>
+                </div>
+                <div onclick="searchBarInput.value = 'ballgame', SubmitEvent_per()">
+                  <span>Ball Game</span>
+                </div>
+                <div onclick="searchBarInput.value = 'todolist', SubmitEvent_per()">
+                  <span>To Do List</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class='disable table page ' id="table-table">
         <div class="page-width element">
           <div class="table-inner height">

@@ -10,6 +10,8 @@ let headerForm = document.getElementById('header-input-form') // header form
 let searchBarInput = document.getElementById('search-bar-input'); //search bar input
 let tableMainPrinting = document.getElementById('table-prinnting')
 let stopText = null;
+
+let returnarrow = document.getElementById('backtoproject')
 function darkBrightmodeChanger() {
 
   Array.from(element).forEach((ele) => {
@@ -117,14 +119,19 @@ headerForm.addEventListener('submit', (e) => {
     }
     inputValue += arrOfInputvalue[i]
   }
-
+if(searchBarInput.value == 'projects'){
+  returnarrow.style.display = 'none'
+}
+else{
+    returnarrow.style.display = 'block'
+}
   for (let x = 0; x < findPage.length; x++) {
     if (findPage[x].classList.contains(inputValue)) {
       searchBarInput.style.color = 'green'
       setTimeout(() => {
         searchBarInput.style.color = 'black'
       }, 1000)
-
+    
       findPage[x].classList.add('enable');
       for (let y = 0; y < findPage.length; y++) {
         if (findPage[y].classList.contains(inputValue)) {
@@ -139,16 +146,7 @@ headerForm.addEventListener('submit', (e) => {
     }
 
   }
-  // if (inputValue == 'table') {
-  //   tablesection.setAttribute('class','enable')
-  //   banner.setAttribute('class','disable')
-  // }
-  // else if(inputValue == 'home'){
-  //   banner.setAttribute('class','enable')
-  //   tablesection.setAttribute('class','disable')
-  // }
 })
-
 
 let buttonTablePrinter = document.getElementById('button-table-printer')
 let tableInput = document.getElementById('table-input')
@@ -389,3 +387,9 @@ todolistdownbutton.addEventListener('click', () => {
 
     }
   }
+
+let submitButton = document.getElementById('submit-button');
+
+function SubmitEvent_per(){
+  submitButton.click()
+}
