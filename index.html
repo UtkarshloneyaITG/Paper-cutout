@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cobra Web – Paper Cutout Projects</title>
-  <meta name="description" content="Welcome to Cobra Web — explore my paper‑cutout web projects showcasing creative coding and interactive design.">
+  <meta name="description"
+    content="Welcome to Cobra Web — explore my paper‑cutout web projects showcasing creative coding and interactive design.">
   <meta name="robots" content="index, follow">
 
   <!-- Open Graph -->
@@ -64,8 +65,8 @@
               <div class="header-grid">
                 <div class="header-logo">
                   <div class="header-logo--logo">
-                    <a href="#"><img src="media/vecteezy_anime-eye-png-graphic-clipart-design_19607058.png" alt="CutOut logo" width="100%"
-                        height="100%" loading="lazy"></a>
+                    <a href="#"><img src="media/vecteezy_anime-eye-png-graphic-clipart-design_19607058.png"
+                        alt="CutOut logo" width="100%" height="100%" loading="lazy"></a>
                   </div>
                   <h1 class="element">Cutout</h1>
                 </div>
@@ -107,16 +108,17 @@
       </header>
     </div>
     <div class="page-container element">
-      <section id="banner" class="page home">
+      <section id="banner" class="page home disable">
         <div class="banner-wrapper element">
           <div class="page-width" id="changingPage">
             <div class="banner-inner height">
               <div class="banner-grid">
                 <h2>Paper Cutout</h2>
-                <p>" Here, you'll find a curated collection of the projects I've built, ideas I've explored, and technologies
-                I'm learning. From web development experiments to creative code challenges, this site reflects my
-                journey through the world of programming and innovation. Whether you're here to get inspired,
-                collaborate, or just take a look around — I'm glad you're here!"</p>
+                <p>" Here, you'll find a curated collection of the projects I've built, ideas I've explored, and
+                  technologies
+                  I'm learning. From web development experiments to creative code challenges, this site reflects my
+                  journey through the world of programming and innovation. Whether you're here to get inspired,
+                  collaborate, or just take a look around — I'm glad you're here!"</p>
                 <div class="banner-button">
                   <button class="button element">Let's gooo</button>
                 </div>
@@ -230,27 +232,61 @@
           </div>
         </div>
       </section>
+      <section class="ballgame page">
+        <div class="ball-game-wrapper">
+          <div class="page-width">
+            <div class="ball-game-inner height">
+              <div class="game-grid">
+                <div class="game-score-board           ">
+
+                </div>
+                <div class="game-heading">
+                  <div>
+                    <span>Time : </span>
+                    <span class="time">30</span>
+                  </div>
+                  <div>
+                    <span>Score : </span>
+                    <span class="score">00</span>
+                  </div>
+                  <div>
+                    <button onclick=" gamestart()" id="button">Start Game</button>
+                  </div>
+                </div>
+                <div class="game-area">
+                  <div class="game-score-board-single">
+                    <p class="your-score">Your score</p>
+                    <p class="game-score">00</p>
+                  </div>
+                  <div class="game-ball">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 
 
   <!-- loader -->
-   <main id="loader">
-  <div id="cyber-loader">
-    <div class="datastream">
-      <div class="bar bar-1"></div>
-      <div class="bar bar-2"></div>
-      <div class="bar bar-3"></div>
-      <div class="bar bar-4"></div>
-      <div class="bar bar-5"></div>
-      <div class="bar bar-6"></div>
-      <div class="bar bar-7"></div>
-      <div class="bar bar-8"></div>
+  <main id="loader">
+    <div id="cyber-loader">
+      <div class="datastream">
+        <div class="bar bar-1"></div>
+        <div class="bar bar-2"></div>
+        <div class="bar bar-3"></div>
+        <div class="bar bar-4"></div>
+        <div class="bar bar-5"></div>
+        <div class="bar bar-6"></div>
+        <div class="bar bar-7"></div>
+        <div class="bar bar-8"></div>
+      </div>
+      <div class="loader-text">Synchronization in progress...</div>
     </div>
-    <div class="loader-text">Synchronization in progress...</div>
-  </div>
-</main>
-<!-- loader -->
+  </main>
+  <!-- loader -->
   <script src="js/script.js"></script>
 </body>
 

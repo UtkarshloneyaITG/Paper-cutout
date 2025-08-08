@@ -54,7 +54,7 @@ function pop_up_clear() {
   clearInterval(stopText)
   clearInterval(wordchangingMain)
 }
-  let arrOftext =  ['developer','gamer','Artist','Pani']
+  let arrOftext =  ['developer','gamer','Artist']
   let x = 0;
   let n = arrOftext.length
 let wordchangingMain = setInterval(() => {
@@ -296,10 +296,12 @@ function todolist_delete_button_two() {
   }
 }
 
+{ //to do list logic
 let todolistupbutton = document.getElementById('todolist-up-button')
 let todolist_overflow_box = document.querySelector('.to-do-list-edit-main-page-body-inner')
 let todolistdownbutton = document.getElementById('todolist-down-button');
 todolist_overflow_box.addEventListener('scroll', () => {
+
   console.log(todolist_overflow_box.scrollHeight)
 
   if (todolist_overflow_box.scrollTop > 0) {
@@ -323,3 +325,67 @@ todolistupbutton.addEventListener('click', () => {
 todolistdownbutton.addEventListener('click', () => {
   todolist_overflow_box.scrollTop = todolist_overflow_box.scrollHeight
 })
+}
+ {
+      //ball game code
+    let scoreBoard = document.querySelector('.game-score-board-single')
+    let gameBall = document.querySelector('.game-ball');
+    let time = document.querySelector('.time');
+    let scorecounter = document.querySelector('.score');
+    let button = document.getElementById('button')
+    let scoreBoard_score = document.querySelector('.game-score') 
+    function gamestart() {
+      scoreBoard.style.display = 'none'
+      console.log(gameBall.ofsetWidth)
+      let gametime = 30;
+      let seconds = gametime;
+      let score = 0;
+      scorecounter.innerText = score;
+      button.setAttribute('disabled', 'true')
+
+      //timer interval 
+      let timer = setInterval(() => {
+        if (seconds > 0) {
+          seconds--
+          if (seconds < 10) time.innerText = '0' + seconds;
+    
+          else time.innerText = seconds;
+        }
+        else {
+          stoptimer()
+
+        }
+      }, 1000)
+      //stop every thing 
+      function stoptimer() {
+        scoreBoard_score.innerText = score
+        score = 0;
+        time.innerText = '30'
+        scorecounter.innerText = '00'
+        gameBall.style.display = 'none'
+        clearInterval(timer)
+        clearInterval(position)
+        button.removeAttribute('disabled', 'true')
+        scoreBoard.style.display = 'flex'
+      }
+
+      //  ball moving function
+      let position = setInterval(() => {
+        gameBall.style.display = 'block'
+        let xAxis = Math.floor(Math.random() * 398)
+        let yAxis = Math.floor(Math.random() * 398) 
+        gameBall.style.top = `${yAxis}px`
+        gameBall.style.left = `${xAxis}px`
+      }, 1000)
+
+      //score logic
+      gameBall.addEventListener('click', () => {
+        score++
+        if (seconds < gametime) {
+          scorecounter.innerText = score;
+          gameBall.style.display = 'none'
+        }
+      })
+
+    }
+  }
