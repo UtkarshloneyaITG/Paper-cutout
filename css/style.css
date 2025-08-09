@@ -109,7 +109,7 @@ html {
 }
 
 .height {
-  height: calc(100vh - 98px);
+  height: calc(100vh - 110px);
 }
 
 .theme-changer {
@@ -360,7 +360,7 @@ html {
 }
 
 .page-container {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   overflow: hidden;
   border-bottom: 2px solid black;
   display: flex;
