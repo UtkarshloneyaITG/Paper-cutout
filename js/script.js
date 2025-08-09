@@ -142,7 +142,6 @@ headerForm.addEventListener('submit', (e) => {
 
       }
     }
-
   }
 })
 

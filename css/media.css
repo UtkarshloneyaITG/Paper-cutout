@@ -17,3 +17,16 @@
     background-image: url('../media/table-of-110.png');
     background-size: cover;
 }
+
+.project-5 {
+    background-image: url('../media/stopwatch.png');
+    background-size: cover;
+}
+.project-0 {
+    background-image: url('../media/home.png');
+    background-position: 60%;
+    background-size:cover ;
+}
+.home {
+    background-color: ;
+}
