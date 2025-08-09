@@ -678,6 +678,10 @@ html {
   grid-template-columns: repeat(6, 200px);
   gap: 20px;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  height: calc(100vh - 220px);
 }
 
 .project-grid>div {
@@ -742,11 +746,14 @@ html {
   font-size: 30px;
   padding: 10px;
   border-bottom: 2px solid black;
-    background-size: 300% 100%;
+  background-size: 300% 100%;
   animation: moveGradient 2s linear infinite alternate;
   background-image: linear-gradient(90deg, rgba(155, 42, 146, 1) 19%, rgba(96, 87, 199, 1) 71%, rgba(237, 221, 83, 1) 100%);
 }
-
+.project-inner {
+  border: 2px solid black;
+  height: 100%;
+}
 .stopwatch-box {
   width: 500px;
   height: 500px;
