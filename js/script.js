@@ -20,7 +20,6 @@ function darkBrightmodeChanger() {
 
   if (dark_bright_mode.style.marginLeft == '20px') {
     dark_bright_mode.style.marginLeft = '0px';
-    document.body.style.background = 'white'
     dark_bright_mode.style.background = 'black'
     dark_bright_box.style.background = 'black'
     dark_bright_mode.style.borderColor = 'white'
@@ -33,7 +32,6 @@ function darkBrightmodeChanger() {
   }
   else {
     dark_bright_mode.style.marginLeft = '20px';
-    document.body.style.background = 'black'
     dark_bright_mode.style.background = 'white'
     dark_bright_box.style.background = 'white'
     dark_bright_mode.style.borderColor = 'black'
@@ -56,38 +54,38 @@ function pop_up_clear() {
   clearInterval(stopText)
   clearInterval(wordchangingMain)
 }
-  let arrOftext =  ['developer','gamer','Artist']
-  let x = 0;
-  let n = arrOftext.length
+let arrOftext = ['developer', 'gamer', 'Artist']
+let x = 0;
+let n = arrOftext.length
 let wordchangingMain = setInterval(() => {
- let words = arrOftext[x]
- let  y = 0;
- let stopText = setInterval(() => {
-   if(y < words.length){
-     textChanging.innerText += words[y]
-     y++
+  let words = arrOftext[x]
+  let y = 0;
+  let stopText = setInterval(() => {
+    if (y < words.length) {
+      textChanging.innerText += words[y]
+      y++
     }
-    else{
+    else {
       stopWord()
     }
-  },200)
-  
-  function stopWord(){
+  }, 200)
+
+  function stopWord() {
     clearInterval(stopText)
   }
   textChanging.innerText = ''
   x++
-x = x%n
+  x = x % n
 }, 3000)
-setTimeout(()=>{
-pop_up.style.display = 'block'
-},2000)
+setTimeout(() => {
+  pop_up.style.display = 'block'
+}, 2000)
 
 
 
 // loader js
 
-window.addEventListener('load',()=>{
+window.addEventListener('load', () => {
   document.getElementById('loader').style.display = 'none'
   document.getElementById('loaded').style.display = 'block'
 })
@@ -119,19 +117,19 @@ headerForm.addEventListener('submit', (e) => {
     }
     inputValue += arrOfInputvalue[i]
   }
-if(searchBarInput.value == 'projects'){
-  returnarrow.style.display = 'none'
-}
-else{
+  if (searchBarInput.value == 'projects') {
+    returnarrow.style.display = 'none'
+  }
+  else {
     returnarrow.style.display = 'block'
-}
+  }
   for (let x = 0; x < findPage.length; x++) {
     if (findPage[x].classList.contains(inputValue)) {
       searchBarInput.style.color = 'green'
       setTimeout(() => {
         searchBarInput.style.color = 'black'
       }, 1000)
-    
+
       findPage[x].classList.add('enable');
       for (let y = 0; y < findPage.length; y++) {
         if (findPage[y].classList.contains(inputValue)) {
@@ -295,101 +293,197 @@ function todolist_delete_button_two() {
 }
 
 { //to do list logic
-let todolistupbutton = document.getElementById('todolist-up-button')
-let todolist_overflow_box = document.querySelector('.to-do-list-edit-main-page-body-inner')
-let todolistdownbutton = document.getElementById('todolist-down-button');
-todolist_overflow_box.addEventListener('scroll', () => {
+  let todolistupbutton = document.getElementById('todolist-up-button')
+  let todolist_overflow_box = document.querySelector('.to-do-list-edit-main-page-body-inner')
+  let todolistdownbutton = document.getElementById('todolist-down-button');
+  todolist_overflow_box.addEventListener('scroll', () => {
 
-  console.log(todolist_overflow_box.scrollHeight)
+    console.log(todolist_overflow_box.scrollHeight)
 
-  if (todolist_overflow_box.scrollTop > 0) {
-    todolistupbutton.style.display = 'block'
-  }
-  else {
-    todolistupbutton.style.display = 'none'
-  }
-
-  if (todolist_overflow_box.scrollTop + todolist_overflow_box.scrollHeight == todolist_overflow_box.scrollHeight) {
-    todolistdownbutton.style.display = 'block'
-  }
-  else {
-    todolistdownbutton.style.display = 'none'
-  }
-})
-todolistupbutton.addEventListener('click', () => {
-  todolist_overflow_box.scrollTop = 0;
-
-})
-todolistdownbutton.addEventListener('click', () => {
-  todolist_overflow_box.scrollTop = todolist_overflow_box.scrollHeight
-})
-}
- {
-      //ball game code
-    let scoreBoard = document.querySelector('.game-score-board-single')
-    let gameBall = document.querySelector('.game-ball');
-    let time = document.querySelector('.time');
-    let scorecounter = document.querySelector('.score');
-    let button = document.getElementById('button')
-    let scoreBoard_score = document.querySelector('.game-score') 
-    function gamestart() {
-      scoreBoard.style.display = 'none'
-      console.log(gameBall.ofsetWidth)
-      let gametime = 30;
-      let seconds = gametime;
-      let score = 0;
-      scorecounter.innerText = score;
-      button.setAttribute('disabled', 'true')
-
-      //timer interval 
-      let timer = setInterval(() => {
-        if (seconds > 0) {
-          seconds--
-          if (seconds < 10) time.innerText = '0' + seconds;
-    
-          else time.innerText = seconds;
-        }
-        else {
-          stoptimer()
-
-        }
-      }, 1000)
-      //stop every thing 
-      function stoptimer() {
-        scoreBoard_score.innerText = score
-        score = 0;
-        time.innerText = '30'
-        scorecounter.innerText = '00'
-        gameBall.style.display = 'none'
-        clearInterval(timer)
-        clearInterval(position)
-        button.removeAttribute('disabled', 'true')
-        scoreBoard.style.display = 'flex'
-      }
-
-      //  ball moving function
-      let position = setInterval(() => {
-        gameBall.style.display = 'block'
-        let xAxis = Math.floor(Math.random() * 398)
-        let yAxis = Math.floor(Math.random() * 398) 
-        gameBall.style.top = `${yAxis}px`
-        gameBall.style.left = `${xAxis}px`
-      }, 1000)
-
-      //score logic
-      gameBall.addEventListener('click', () => {
-        score++
-        if (seconds < gametime) {
-          scorecounter.innerText = score;
-          gameBall.style.display = 'none'
-        }
-      })
-
+    if (todolist_overflow_box.scrollTop > 0) {
+      todolistupbutton.style.display = 'block'
     }
+    else {
+      todolistupbutton.style.display = 'none'
+    }
+
+    if (todolist_overflow_box.scrollTop + todolist_overflow_box.scrollHeight == todolist_overflow_box.scrollHeight) {
+      todolistdownbutton.style.display = 'block'
+    }
+    else {
+      todolistdownbutton.style.display = 'none'
+    }
+  })
+  todolistupbutton.addEventListener('click', () => {
+    todolist_overflow_box.scrollTop = 0;
+
+  })
+  todolistdownbutton.addEventListener('click', () => {
+    todolist_overflow_box.scrollTop = todolist_overflow_box.scrollHeight
+  })
+}
+{
+  //ball game code
+  let scoreBoard = document.querySelector('.game-score-board-single')
+  let gameBall = document.querySelector('.game-ball');
+  let time = document.querySelector('.time');
+  let scorecounter = document.querySelector('.score');
+  let button = document.getElementById('button')
+  let scoreBoard_score = document.querySelector('.game-score')
+  function gamestart() {
+    scoreBoard.style.display = 'none'
+    console.log(gameBall.ofsetWidth)
+    let gametime = 30;
+    let seconds = gametime;
+    let score = 0;
+    scorecounter.innerText = score;
+    button.setAttribute('disabled', 'true')
+
+    //timer interval 
+    let timer = setInterval(() => {
+      if (seconds > 0) {
+        seconds--
+        if (seconds < 10) time.innerText = '0' + seconds;
+
+        else time.innerText = seconds;
+      }
+      else {
+        stoptimer()
+
+      }
+    }, 1000)
+    //stop every thing 
+    function stoptimer() {
+      scoreBoard_score.innerText = score
+      score = 0;
+      time.innerText = '30'
+      scorecounter.innerText = '00'
+      gameBall.style.display = 'none'
+      clearInterval(timer)
+      clearInterval(position)
+      button.removeAttribute('disabled', 'true')
+      scoreBoard.style.display = 'flex'
+    }
+
+    //  ball moving function
+    let position = setInterval(() => {
+      gameBall.style.display = 'block'
+      let xAxis = Math.floor(Math.random() * 398)
+      let yAxis = Math.floor(Math.random() * 398)
+      gameBall.style.top = `${yAxis}px`
+      gameBall.style.left = `${xAxis}px`
+    }, 1000)
+
+    //score logic
+    gameBall.addEventListener('click', () => {
+      score++
+      if (seconds < gametime) {
+        scorecounter.innerText = score;
+        gameBall.style.display = 'none'
+      }
+    })
+
   }
+}
 
 let submitButton = document.getElementById('submit-button');
 
-function SubmitEvent_per(){
+function SubmitEvent_per() {
   submitButton.click()
+}
+
+// stop watch
+{
+  let stopwatchScreen = document.querySelector('.stopwatch-time');
+  let stopwatchScreen_milliSeconds = document.querySelector('.stopwatch-milliseconds');
+  let stopwatchsatrtbutton = document.getElementById('stopwatch-start-button')
+  let stopWatchStopButton = document.getElementById('stopwatch-stop-button')
+  let stopWhachResetButton = document.getElementById('stopwatch-reset-button')
+  let seconds = 0;
+  let minutes = 0;
+  let hours = 0;
+  let milliseconds = 0;
+  let x = 0;
+  let y = 0;
+  let z = 0;
+  let startStopWatch;
+  function startWatchTime() {
+
+    stopWatchStopButton.disabled = false
+    stopWatchStopButton.style.opacity = '1'
+
+    stopwatchsatrtbutton.disabled = true
+    stopwatchsatrtbutton.style.opacity = '0.5'
+
+    stopWhachResetButton.disabled = false;
+    stopWhachResetButton.style.opacity = '1'
+    startStopWatch = setInterval(() => {
+      milliseconds++
+      stopwatchScreen_milliSeconds.innerText = milliseconds
+      if (milliseconds >= 5) {
+        milliseconds = 0;
+        seconds++
+      }
+      if (seconds == 60) {
+        seconds = 0;
+        minutes++
+      }
+      if(minutes == 60){
+        hours++
+        minutes = 0
+      }
+      if (seconds < 10) {
+        y = 0
+      }
+      else {
+        y = '';
+      }
+      if (minutes < 10) {
+        x = 0
+      }
+      else {
+        x = '';
+      }
+       if (hours < 10) {
+        z = 0
+      }
+      else {
+        z = '';
+      }
+      stopwatchScreen.innerText = `${z}${hours}:${x}${minutes}:${y}${seconds}`
+    }, 200)
+  }
+
+  function stopWatchTime() {
+    stopWatchStopButton.disabled = true
+    stopWatchStopButton.style.opacity = '0.5'
+
+    stopwatchsatrtbutton.disabled = false
+    stopwatchsatrtbutton.style.opacity = '1'
+
+    stopWhachResetButton.disabled = false;
+    stopWhachResetButton.style.opacity = '1'
+    clearInterval(startStopWatch)
+
+  }
+  function resetWhachTime() {
+     clearInterval(startStopWatch)
+     stopwatchScreen_milliSeconds.innerText = '0'
+    stopwatchScreen.innerText = `00 : 00`
+    stopWatchStopButton.disabled = true
+    stopWatchStopButton.style.opacity = '0.5'
+
+    stopwatchsatrtbutton.disabled = false
+    stopwatchsatrtbutton.style.opacity = '1'
+
+    stopWhachResetButton.disabled = true;
+    stopWhachResetButton.style.opacity = '0.5'
+
+    seconds = 0;
+    minutes = 0;
+    hours = 0;
+    milliseconds = 0;
+    x = 0;
+    y = 0;
+  }
 }

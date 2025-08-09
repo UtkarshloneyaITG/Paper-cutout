@@ -28,9 +28,10 @@
   <meta name="google-site-verification" content="YOUR_CODE_HERE">
   <meta name="googlebot" content="notranslate">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
 </head>
 
-<body>
+<body class="element">
   <div class="container" id="loaded">
     <div class="pop-up-wrapper page-width" id="pop-up">
       <div class="pop-up">
@@ -63,12 +64,12 @@
           <div class="page-width">
             <div class="header-inner">
               <div class="header-grid">
-                <div class="header-logo">
+                <div class="header-logo" onclick="searchBarInput.value = 'home', SubmitEvent_per()">
                   <div class="header-logo--logo">
                     <a href="#"><img src="media/vecteezy_anime-eye-png-graphic-clipart-design_19607058.png"
                         alt="CutOut logo" width="100%" height="100%" loading="lazy"></a>
                   </div>
-                  <h1 class="element" onclick="searchBarInput.value = 'home', SubmitEvent_per()">Cutout</h1>
+                  <h1 class="element curser-pointer">Cutout</h1>
                 </div>
                 <div class="header-search-bar">
                   <form id="header-input-form">
@@ -116,7 +117,7 @@
         </svg>
         </div>
       </div>
-      <section id="banner" class="page home">
+      <section id="banner" class="page home disable">
         <div class="banner-wrapper element">
           <div class="page-width" id="changingPage">
             <div class="banner-inner height">
@@ -141,17 +142,20 @@
         <div class="projects-wrapper">
           <div class="page-width">
             <div class="project-inner">
+              <div class="project-heading element">
+                <span>Projects</span>
+              </div>
               <div class="project-grid">
-                <div onclick="searchBarInput.value = 'table', SubmitEvent_per()">
+                <div onclick="searchBarInput.value = 'table', SubmitEvent_per()" class="project-1">
                   <span>Table</span>
                 </div>
-                <div onclick="searchBarInput.value = 'textManipulation', SubmitEvent_per()">
+                <div onclick="searchBarInput.value = 'textManipulation', SubmitEvent_per()"  class="project-2">
                   <span>Text Manipulation</span>
                 </div>
-                <div onclick="searchBarInput.value = 'ballgame', SubmitEvent_per()">
+                <div onclick="searchBarInput.value = 'ballgame', SubmitEvent_per()"  class="project-3">
                   <span>Ball Game</span>
                 </div>
-                <div onclick="searchBarInput.value = 'todolist', SubmitEvent_per()">
+                <div onclick="searchBarInput.value = 'todolist', SubmitEvent_per()"  class="project-4">
                   <span>To Do List</span>
                 </div>
               </div>
@@ -292,6 +296,29 @@
                     <p class="game-score">00</p>
                   </div>
                   <div class="game-ball">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page stopwatch">
+        <div class="stopwatch-wrapper">
+          <div class="page-width">
+            <div class="stopwatch-inner">
+              <div class="stopwatch-grid">
+                <div class="stopwatch-box">
+                  <div class="stopwatch-screen">
+                    <div>
+                    <span class="stopwatch-time">00:00:00</span>
+                    <span class="stopwatch-milliseconds">0</span>
+                    </div>
+                  </div>
+                  <div class="stopwatch-buttons">
+                    <button onclick="startWatchTime()" id="stopwatch-start-button">Start</button>
+                    <button onclick="stopWatchTime()" id="stopwatch-stop-button">Stop</button>
+                    <button onclick="resetWhachTime() " id="stopwatch-reset-button">Reset</button>
                   </div>
                 </div>
               </div>
