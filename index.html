@@ -29,6 +29,7 @@
   <meta name="googlebot" content="notranslate">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/responsive.css  ">
 </head>
 
 <body class="element">
@@ -71,13 +72,14 @@
                 <div class="header-search-bar element">
                   <form id="header-input-form">
                     <input type="text" id="search-bar-input" class="element">
-                    <button class="element" type="submit" id="submit-button"><label for="search-bar-input">Search</label></button>
+                    <button class="element" type="submit" id="submit-button"><label
+                        for="search-bar-input">Search</label></button>
                   </form>
                 </div>
                 <div class="header-links">
                   <nav>
                     <ul>
-                      <li><a href="#" class="element">Home</a></li>
+                      <li><a href="index.html" class="element">Home</a></li>
                       <li><a href="#" class="element">Contacts</a></li>
                       <li><a href="#" class="element">About</a></li>
                       <li><a href="#" class="element">More</a></li>
@@ -108,10 +110,10 @@
     <div class="page-container element">
       <div id="backtoproject">
         <button onclick="searchBarInput.value = 'projects', SubmitEvent_per()" id="backtoproject">project</button>
-          <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="red">
-          <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
-        </svg>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="red">
+            <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+          </svg>
         </div>
       </div>
 
@@ -141,70 +143,93 @@
           <div class="page-width">
             <div class="project-inner">
               <div class="project-heading element">
-                <span>Projects</span>
+                <div class="project-heading-grid">
+                  <div class="project-head-title">
+                    <span>Projects</span>
+                  </div>
+                  <div class="project-search-bar">
+                    <input type="text" id="project-search" placeholder="Search project here...">
+                    <button>
+                      <svg width="25px" height="25px" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+
+                        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" />
+
+                        <g id="SVGRepo_iconCarrier">
+                          <path
+                            d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                            stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+
+                      </svg>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="project-grid">
-                <div onclick="searchBarInput.value = 'home', SubmitEvent_per()"  class="project-0">
+              <div class="project-grid" id="projectGrid">
+                <div onclick="searchBarInput.value = 'home', SubmitEvent_per()" class="project-0 home">
                   <span>Home</span>
                 </div>
-                <div onclick="searchBarInput.value = 'table', SubmitEvent_per()" class="project-1">
+                <div onclick="searchBarInput.value = 'table', SubmitEvent_per()" class="project-1 table">
                   <span>Table</span>
                 </div>
-                <div onclick="searchBarInput.value = 'textManipulation', SubmitEvent_per()"  class="project-2">
+                <div onclick="searchBarInput.value = 'textManipulation', SubmitEvent_per()" class="project-2 textManipulation">
                   <span>Text Manipulation</span>
                 </div>
-                <div onclick="searchBarInput.value = 'ballgame', SubmitEvent_per()"  class="project-3">
+                <div onclick="searchBarInput.value = 'ballgame', SubmitEvent_per()" class="project-3 ballgame">
                   <span>Ball Game</span>
                 </div>
-                <div onclick="searchBarInput.value = 'todolist', SubmitEvent_per()"  class="project-4">
+                <div onclick="searchBarInput.value = 'todolist', SubmitEvent_per()" class="project-4 todolist">
                   <span>To Do List</span>
                 </div>
-                 <div onclick="searchBarInput.value = 'stopwatch', SubmitEvent_per()"  class="project-5">
+                <div onclick="searchBarInput.value = 'stopwatch', SubmitEvent_per()" class="project-5 stopwatch">
                   <span>stop Watch</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-6">
+                <div onclick="searchBarInput.value = 'etchasketch', SubmitEvent_per()" class="project-6 etchasketch">
+                  <span>Etch a sketch</span>
+                </div>
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-7">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-7">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-8">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-8">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-9">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-9">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-10">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-10">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-11">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-11">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-12">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-12">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-13">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-13">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-14">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-14">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-15">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-15">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-16">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-16">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-17">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-17">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-18">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-18">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-19">
                   <span>Empty</span>
                 </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-19">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()"  class="project-20">
+                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-20">
                   <span>Empty</span>
                 </div>
               </div>
@@ -360,14 +385,31 @@
                 <div class="stopwatch-box">
                   <div class="stopwatch-screen">
                     <div>
-                    <span class="stopwatch-time">00:00:00</span>
-                    <span class="stopwatch-milliseconds">0</span>
+                      <span class="stopwatch-time">00:00:00</span>
+                      <span class="stopwatch-milliseconds">0</span>
                     </div>
                   </div>
                   <div class="stopwatch-buttons">
                     <button onclick="startWatchTime()" id="stopwatch-start-button">Start</button>
                     <button onclick="stopWatchTime()" id="stopwatch-stop-button">Stop</button>
                     <button onclick="resetWhachTime() " id="stopwatch-reset-button">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="etchasketch page disable">
+        <div class="etch-a-sketch-wrapper">
+          <div class="page-width">
+            <div class="etch-a-sketch-inner">
+              <div class="etch-a-sketch-grid">
+                <div class="etch-a-sketch-screen">
+                  <canvas height="400px" width="690px" class="etch-a-sketch-canvas" id="etch-a-sketch-canvas"></canvas>
+                  <div class="etchasketchweel">
+                    <div></div>
+                    <div></div>
                   </div>
                 </div>
               </div>

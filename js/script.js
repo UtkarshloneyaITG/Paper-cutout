@@ -139,7 +139,6 @@ headerForm.addEventListener('submit', (e) => {
           findPage[y].classList.add('disable')
           findPage[y].classList.remove('enable')
         }
-
       }
     }
   }
@@ -427,7 +426,7 @@ function SubmitEvent_per() {
         seconds = 0;
         minutes++
       }
-      if(minutes == 60){
+      if (minutes == 60) {
         hours++
         minutes = 0
       }
@@ -443,7 +442,7 @@ function SubmitEvent_per() {
       else {
         x = '';
       }
-       if (hours < 10) {
+      if (hours < 10) {
         z = 0
       }
       else {
@@ -466,9 +465,9 @@ function SubmitEvent_per() {
 
   }
   function resetWhachTime() {
-     clearInterval(startStopWatch)
-     stopwatchScreen_milliSeconds.innerText = '0'
-    stopwatchScreen.innerText = `00 : 00`
+    clearInterval(startStopWatch)
+    stopwatchScreen_milliSeconds.innerText = '0'
+    stopwatchScreen.innerText = `00:00:00`
     stopWatchStopButton.disabled = true
     stopWatchStopButton.style.opacity = '0.5'
 
@@ -487,3 +486,40 @@ function SubmitEvent_per() {
   }
 }
 
+{
+  let etchasketch = document.querySelector('.etchasketch');
+  const etchSketchCanvas = document.getElementById('etch-a-sketch-canvas')
+  let context = etchSketchCanvas.getContext('2d')
+
+let x = 100;
+let y = 100;
+let x_x = x;
+let y_y = y;
+
+document.addEventListener('keydown', (e) => {
+  if(!etchasketch.classList.contains('disable')){
+    if (e.keyCode === 37) {
+        x--;
+    }
+    if (e.keyCode === 38) {
+        y--;
+    }
+    if (e.keyCode === 40) {
+        y++;
+    }
+    if (e.keyCode === 39) {
+        x++;
+    }
+
+    context.beginPath();
+    context.moveTo(x_x, y_y);
+    context.lineTo(x, y);
+    context.stroke();
+
+    x_x = x;
+    y_y = y;
+  }
+});
+
+
+}
