@@ -19,7 +19,7 @@ html {
   width: 100px;
   height: 100px;
   background-size: cover;
- background-image: url('../media/cutoutlogo.png');
+ background-image: url('../media/cutoutlogo.webp');
 }
 
 .header-grid {
@@ -210,7 +210,7 @@ html {
 .pop-up-image {
     width: 200px;
     height:300px;
-    background-image: url('../media/luffy.png');
+    background-image: url('../media/luffy.webp');
     background-size: cover;
 }
 
