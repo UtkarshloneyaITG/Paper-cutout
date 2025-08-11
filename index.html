@@ -117,7 +117,7 @@
         </div>
       </div>
 
-      <section id="banner" class="page home">
+      <section id="banner" class="null page home">
         <div class="banner-wrapper element">
           <div class="page-width" id="changingPage">
             <div class="banner-inner height">
@@ -138,7 +138,7 @@
         </div>
       </section>
 
-      <section class="page projects disable">
+      <section class="page disable projects">
         <div class="projects-wrapper">
           <div class="page-width">
             <div class="project-inner">
@@ -169,76 +169,14 @@
                 </div>
               </div>
               <div class="project-grid" id="projectGrid">
-                <div onclick="searchBarInput.value = 'home', SubmitEvent_per()" class="project-0 home">
-                  <span>Home</span>
-                </div>
-                <div onclick="searchBarInput.value = 'table', SubmitEvent_per()" class="project-1 table">
-                  <span>Table</span>
-                </div>
-                <div onclick="searchBarInput.value = 'textManipulation', SubmitEvent_per()" class="project-2 textManipulation">
-                  <span>Text Manipulation</span>
-                </div>
-                <div onclick="searchBarInput.value = 'ballgame', SubmitEvent_per()" class="project-3 ballgame">
-                  <span>Ball Game</span>
-                </div>
-                <div onclick="searchBarInput.value = 'todolist', SubmitEvent_per()" class="project-4 todolist">
-                  <span>To Do List</span>
-                </div>
-                <div onclick="searchBarInput.value = 'stopwatch', SubmitEvent_per()" class="project-5 stopwatch">
-                  <span>stop Watch</span>
-                </div>
-                <div onclick="searchBarInput.value = 'etchasketch', SubmitEvent_per()" class="project-6 etchasketch">
-                  <span>Etch a sketch</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-7">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-8">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-9">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-10">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-11">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-12">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-13">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-14">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-15">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-16">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-17">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-18">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-19">
-                  <span>Empty</span>
-                </div>
-                <div onclick="searchBarInput.value = '', SubmitEvent_per()" class="project-20">
-                  <span>Empty</span>
-                </div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class='disable table page ' id="table-table">
+      <section class='disable page table  ' id="table-table">
         <div class="page-width element">
           <div class="table-inner height">
             <div class="table-grid">
@@ -252,7 +190,7 @@
           </div>
         </div>
       </section>
-      <section class="disable textmanipulation page">
+      <section class="disable page textmanipulation">
         <div class="page-width element">
           <div class="text-maipulation-inner height">
             <div class="text-maipulation-grid">
@@ -343,7 +281,7 @@
           </div>
         </div>
       </section>
-      <section class="ballgame page disable">
+      <section class="page disable ballgame ">
         <div class="ball-game-wrapper">
           <div class="page-width">
             <div class="ball-game-inner height">
@@ -377,7 +315,7 @@
           </div>
         </div>
       </section>
-      <section class="page stopwatch disable">
+      <section class="page disable stopwatch" id="stopwatch">
         <div class="stopwatch-wrapper">
           <div class="page-width">
             <div class="stopwatch-inner">
@@ -400,7 +338,7 @@
           </div>
         </div>
       </section>
-      <section class="etchasketch page disable">
+      <section class="page disable etchasketch" id="etch-a-sketch">
         <div class="etch-a-sketch-wrapper">
           <div class="page-width">
             <div class="etch-a-sketch-inner">
@@ -408,7 +346,7 @@
                 <div class="etch-a-sketch-screen">
                   <canvas height="400px" width="690px" class="etch-a-sketch-canvas" id="etch-a-sketch-canvas"></canvas>
                   <div class="etchasketchweel">
-                    <div></div>
+                    <div onclick="resetCanvas()" class="clearbutton-canvas">Clear</div>
                     <div></div>
                   </div>
                 </div>
@@ -417,6 +355,8 @@
           </div>
         </div>
       </section>
+      <section></section>
+      <section></section>
     </div>
   </div>
 

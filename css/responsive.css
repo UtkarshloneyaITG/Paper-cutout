@@ -2,4 +2,12 @@
     .project-grid {
             grid-template-columns: repeat(4, 200px);
     }
+    .stopwatch-box {
+        width:350px;
+        height:350px;
+        gap: 30px;
+    }
+    .stopwatch-buttons button {
+        padding:7px 15px;
+    }
 }

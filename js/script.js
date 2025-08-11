@@ -1,3 +1,35 @@
+let projects = [];
+let projectgrid = document.getElementById('projectGrid');
+let sections = document.getElementsByTagName('section');
+
+Array.from(sections).forEach((sec,index)=>{
+  projects.push(
+    {
+      projectName : sections[index].classList[2],
+      id:index,
+    }
+  )
+})
+console.log(projects[0].projectName)
+for(let x of projects){
+  if(x.projectName == 'projects'){
+    continue;
+  }
+  console.log(x.projectName)
+  let element = document.createElement('div')
+
+  element.addEventListener("click"  , ()=>{
+    searchBarInput.value = x.projectName
+     SubmitEvent_per()
+  })
+  element.setAttribute('class',`project-${x.id} ${x.projectName}`)
+  element.setAttribute('style',`background-image:url('../media/${x.projectName}.png'); background-size:cover`)
+  element.innerHTML = `<span>${x.projectName}</span>`
+
+  projectgrid.appendChild(element)
+}
+
+console.log(projects)
 console.log('js running');
 let dark_bright_mode = document.getElementById('dark-bright-mode'); //dark bright mode box
 let dark_bright_box = document.getElementById('dark-bright-mode-box') // dark bright mode ball
@@ -405,16 +437,29 @@ function SubmitEvent_per() {
   let y = 0;
   let z = 0;
   let startStopWatch;
+  document.addEventListener('keydown',(e)=>{
+    if(document.getElementById('stopwatch').classList.contains('enable')){
+    if(e.keyCode == 83){
+      stopwatchsatrtbutton.click()
+    }
+    if(e.keyCode == 84){
+      stopWatchStopButton.click()
+    }
+    if(e.keyCode == 82){
+      stopWhachResetButton.click()
+    }
+  }
+  })
+
   function startWatchTime() {
 
     stopWatchStopButton.disabled = false
     stopWatchStopButton.style.opacity = '1'
-
     stopwatchsatrtbutton.disabled = true
     stopwatchsatrtbutton.style.opacity = '0.5'
-
     stopWhachResetButton.disabled = false;
     stopWhachResetButton.style.opacity = '1'
+
     startStopWatch = setInterval(() => {
       milliseconds++
       stopwatchScreen_milliSeconds.innerText = milliseconds
@@ -430,29 +475,12 @@ function SubmitEvent_per() {
         hours++
         minutes = 0
       }
-      if (seconds < 10) {
-        y = 0
-      }
-      else {
-        y = '';
-      }
-      if (minutes < 10) {
-        x = 0
-      }
-      else {
-        x = '';
-      }
-      if (hours < 10) {
-        z = 0
-      }
-      else {
-        z = '';
-      }
-      stopwatchScreen.innerText = `${z}${hours}:${x}${minutes}:${y}${seconds}`
+      stopwatchScreen.innerText = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, "0")}`
     }, 200)
   }
 
   function stopWatchTime() {
+
     stopWatchStopButton.disabled = true
     stopWatchStopButton.style.opacity = '0.5'
 
@@ -487,39 +515,43 @@ function SubmitEvent_per() {
 }
 
 {
-  let etchasketch = document.querySelector('.etchasketch');
+  let etchasketch = document.getElementById('etch-a-sketch');
   const etchSketchCanvas = document.getElementById('etch-a-sketch-canvas')
   let context = etchSketchCanvas.getContext('2d')
 
-let x = 100;
-let y = 100;
-let x_x = x;
-let y_y = y;
+  let x = 100;
+  let y = 100;
+  let x_x = x;
+  let y_y = y;
 
-document.addEventListener('keydown', (e) => {
-  if(!etchasketch.classList.contains('disable')){
-    if (e.keyCode === 37) {
+  document.body.addEventListener('keydown', (e) => {
+    let validation = etchasketch.classList.contains('enable')
+    if (validation) {
+      if (e.keyCode === 37) {
         x--;
-    }
-    if (e.keyCode === 38) {
+      }
+      if (e.keyCode === 38) {
         y--;
-    }
-    if (e.keyCode === 40) {
+      }
+      if (e.keyCode === 40) {
         y++;
-    }
-    if (e.keyCode === 39) {
+      }
+      if (e.keyCode === 39) {
         x++;
+      }
+
+      context.beginPath();
+      context.moveTo(x_x, y_y);
+      context.lineTo(x, y);
+      context.stroke();
+
+      x_x = x;
+      y_y = y;
     }
+  });
 
-    context.beginPath();
-    context.moveTo(x_x, y_y);
-    context.lineTo(x, y);
-    context.stroke();
-
-    x_x = x;
-    y_y = y;
+  function resetCanvas(){
+    context.clearRect(0, 0, etchSketchCanvas.width, etchSketchCanvas.height);
   }
-});
-
 
 }
